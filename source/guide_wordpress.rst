@@ -50,9 +50,15 @@ Your blog domain needs to be setup:
 Installation
 ============
 
-``cd`` to your :manual:`document root <web-documentroot>`, then download and configure WordPress with ``wp-cli``:
+``cd`` to your :manual:`document root <web-documentroot>` and remove the default uberspace ``index.html`` (otherwise it will be returned by the server ignoring your wordpress installation)
 
-You will need to enter the following information:
+.. code-block:: console
+
+ [isabell@stardust ~]$ cd /var/www/virtual/$USER/html/
+ [isabell@stardust html]$ rm index.html
+ [isabell@stardust html]$
+
+Then download and configure WordPress with ``wp-cli``, you will need to enter the following information:
 
   * your blog URL: The URL for your blog. For example: isabell.uber.space
   * your MySQL username and password: you should know your MySQL :manual_anchor:`credentials <database-mysql.html#login-credentials>` by now. If you don't, start reading again at the top.
